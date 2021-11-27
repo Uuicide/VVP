@@ -63,7 +63,7 @@ int main()
 	cin >> x2 >> y2;
 	cout << "Введите координаты третьей вершины\n";
 	cin >> x3 >> y3;
-	P = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1)) + sqrt((x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2)) + sqrt((x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3));
-	S = sqrt(P/2 * (P/2 - sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1))) * (P/2 - sqrt((x3 - x2) * (x3 - x2) + (y3 - y2) * (y3 - y2))) * (P/2 - sqrt((x1 - x3) * (x1 - x3) + (y1 - y3) * (y1 - y3))));
+	P = sqrt(abs(x2 - x1) * abs(x2 - x1) + abs(y2 - y1) * abs(y2 - y1)) + sqrt(abs(x3 - x2) * abs(x3 - x2) + abs(y3 - y2) * abs(y3 - y2)) + sqrt(abs(x1 - x3) * abs(x1 - x3) + abs(y1 - y3) * abs(y1 - y3));
+	S = sqrt(P/2 * (P/2 - sqrt(abs(x2 - x1) * abs(x2 - x1) + abs(y2 - y1) * abs(y2 - y1))) * (P/2 - sqrt(abs(x3 - x2) * abs(x3 - x2) + abs(y3 - y2) * abs(y3 - y2))) * (P/2 - sqrt(abs(x1 - x3) * abs(x1 - x3) + abs(y1 - y3) * abs(y1 - y3))));
 	cout << "Периметр треугольника = " << P << "; Площадь = " << S << endl;
 }
